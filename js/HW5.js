@@ -191,11 +191,13 @@ function displayword(){
 //     });
     
 // }
+const url = "https://api.wordnik.com/v4/word.json/" + word + "/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
 function word_validate(word) {
 
     $.ajax({
         type: "GET",
-        url:"http://www.math.sjsu.edu/~foster/dictionary.txt",
+        //url:"http://www.math.sjsu.edu/~foster/dictionary.txt",
+        url:url
 
     }).done(function (result) {
       $("#word").css({color:'green'});
