@@ -176,22 +176,6 @@ function displayword(){
 /* ******************* function to verify if user's word exists in dictionary  ******************  */
 //https://www.codegrepper.com/code-examples/javascript/check+if+a+word+exists+in+dictionary+javascript
 //http://www.math.sjsu.edu/~foster/dictionary.txt
-// function word_validate(word) {
-
-//   // const url = "http://www.math.sjsu.edu/~foster/dictionary.txt";
-//     $.ajax({
-//         type: "GET",
-//         //url:'https://raw.githubusercontent.com/dwyl/english-words/master/words_dictionary.json',
-//         //url:"dictionary.txt",
-
-//     }).done(function (result) {
-//       $("#word").css({color:'green'});
-//     }).fail(function () {
-//       $("#word").css({color:'red'});
-//     });
-    
-// }
-
 function word_validate(word) {
 
     $.ajax({
