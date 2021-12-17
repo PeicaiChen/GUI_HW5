@@ -195,7 +195,7 @@ function word_validate(word) {
 
     $.ajax({
         type: "GET",
-        url:"dictionary.txt",
+        url:"words_dictionary.json",
 
     }).done(function (result) {
       $("#word").css({color:'green'});
