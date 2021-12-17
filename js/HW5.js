@@ -195,7 +195,7 @@ function word_validate(word) {
 
     $.ajax({
         type: "GET",
-        url:"dictionary.txt",
+        url:"http://www.math.sjsu.edu/~foster/dictionary.txt",
 
     }).done(function (result) {
       $("#word").css({color:'green'});
