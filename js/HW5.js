@@ -41,12 +41,12 @@ ScrabbleTiles[22] = {"letter": "W", "value" : 4,  "original-distribution" : 2,  
 ScrabbleTiles[23] = {"letter": "X", "value" : 8,  "original-distribution" : 1,  "number-remaining" : 1 } ;
 ScrabbleTiles[24] = {"letter": "Y", "value" : 4,  "original-distribution" : 2,  "number-remaining" : 2 } ;
 ScrabbleTiles[25] = {"letter": "Z", "value" : 10, "original-distribution" : 1,  "number-remaining" : 1 } ;
-ScrabbleTiles[26] = {"letter": "%", "value" : 0,  "original-distribution" : 2,  "number-remaining" : 2 } ;
+ScrabbleTiles[26] = {"letter": "_", "value" : 0,  "original-distribution" : 2,  "number-remaining" : 2 } ;
 
 //Pick random letter from the list, https://www.codegrepper.com/code-examples/javascript/how+to+pick+random+image+using+javascript
 for(var i = 0; i < 7; i++) {
   var index = Math.floor(Math.random() * ScrabbleTiles.length);
-  $("<div class='draggable'><img id = '"+ScrabbleTiles[index].letter+"'  class = '"+index+"' src = '"+"img/scrabble_letter/" + ScrabbleTiles[index].letter + ".png" +"'>"+"</img>").appendTo("#draggable");
+  $("<div class='draggable'><img id = '"+ScrabbleTiles[index].letter+"'  class = '"+index+"' src = '"+"img/scrabble_letter/" + index + ".png" +"'>"+"</img>").appendTo("#draggable");
 }
 
 
@@ -156,7 +156,7 @@ function displayword(){
     // there is an image in droppable div, get its id&className
     for(var i =0; i< $(this).length; i++) 
     {
-        word += this.id;
+        word += ScrabbleTiles[this.className].letter;
         score += ScrabbleTiles[this.className].value;
     }
     word_validate(word);
